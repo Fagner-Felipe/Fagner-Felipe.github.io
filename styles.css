@@ -1,0 +1,337 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Conteiner geral */
+.container {
+  background-color: #151616;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Conteiner sistema middleware */
+.container-sist-solar {
+  font-size: 10px;
+  width: 500px;
+  height: 500px;
+  background: transparent;
+  margin-bottom: 30rem;
+  margin-top: 500px;
+  position: relative;
+  z-index: 3;
+}
+
+.sun {
+  position: absolute;
+  top: 12em;
+  left: 12em;
+  width: 15em;
+  height: 15em;
+  background-image: url(/img/middleware.png);
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 2;
+}
+.geomap,
+.hub,
+.playg,
+.otrs,
+.senior,
+.senior-tools,
+.senior-tools2,
+.senior-tools3 {
+  position: absolute;
+  border-style: solid;
+  border-color: silver transparent transparent transparent;
+  border-width: 0.1em 0.1em 0 0;
+  border-radius: 50%;
+}
+
+.senior {
+  top: 5em;
+  left: 5em;
+  width: 30em;
+  height: 30em;
+  animation: orbitar 30s linear infinite;
+}
+
+.hub {
+  top: -5em;
+  left: -5em;
+  width: 50em;
+  height: 50em;
+  animation: orbitar 25s linear infinite;
+}
+
+.playg {
+  top: -15em;
+  left: -15em;
+  width: 70em;
+  height: 70em;
+  animation: orbitar 15.5s linear infinite;
+}
+
+.otrs {
+  top: -25em;
+  left: -25em;
+  width: 90em;
+  height: 90em;
+  animation: orbitar 20.5s linear infinite;
+}
+
+.geomap {
+  top: -35em;
+  left: -35em;
+  width: 110em;
+  height: 110em;
+  animation: orbitar 27.5s linear infinite;
+}
+
+.senior-tools {
+  top: 0;
+  right: 0;
+  width: 10em;
+  height: 10em;
+  animation: orbitar 8s linear infinite;
+}
+
+.senior-tools2 {
+  top: 0;
+  right: 0;
+  width: 10em;
+  height: 10em;
+  animation: orbitar 8s linear infinite;
+}
+
+.senior-tools3 {
+  top: 0;
+  right: 0;
+  width: 10em;
+  height: 10em;
+  animation: orbitar 8s linear infinite;
+}
+
+.senior::before,
+.hub::before,
+.playg::before,
+.otrs::before,
+.geomap::before,
+.senior-tools::before,
+.senior-tools2::before,
+.senior-tools3::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.senior::before {
+  top: 2em;
+  right: 2em;
+  width: 7em;
+  height: 7em;
+  background-image: url(/img/dir_tec/senior-sistemas.png);
+  background-size: cover;
+}
+
+.hub::before {
+  top: 4em;
+  right: 4em;
+  width: 7em;
+  height: 7em;
+  background-image: url(/img/dir_tec/hubsoft.png);
+  background-size: cover;
+}
+
+.playg::before {
+  top: 7em;
+  right: 7em;
+  width: 7em;
+  height: 7em;
+  background-image: url(/img/dir_tec/playgroud.jpg);
+  background-size: cover;
+}
+
+.otrs::before {
+  top: 10em;
+  right: 10em;
+  width: 7em;
+  height: 7em;
+  background-image: url(/img/dir_tec/otrs.png);
+  background-size: cover;
+}
+
+.geomap::before {
+  top: 13em;
+  right: 13em;
+  width: 7em;
+  height: 7em;
+  background-image: url(/img/DSO/geomap.png);
+  background-size: cover;
+}
+
+.senior-tools::before {
+  top: 0.95em;
+  right: 0.5em;
+  width: 1.2em;
+  height: 1.2em;
+  background: silver;
+}
+
+.senior-tools2::before {
+  top: -0.45em;
+  right: 3em;
+  width: 1.2em;
+  height: 1.2em;
+  background: silver;
+  z-index: 5;
+}
+
+.senior-tools3::before {
+  top: 0.19em;
+  right: 1.55em;
+  width: 1.2em;
+  height: 1.2em;
+  background: silver;
+  z-index: 6;
+}
+
+/* conteiner legenda */
+.container-subtitle {
+  width: 800px;
+  height: 200px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+
+.senior-legenda,
+.hub-legenda,
+.playg-legenda,
+.otrs-legenda,
+.geomap-legenda {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.description {
+  width: 900px;
+  height: 700px;
+  border-radius: 60px 5px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 7;
+  position: absolute;
+  margin-bottom: 400px;
+}
+
+.senior-legenda {
+  background-image: url(/img/dir_tec/senior-sistemas.png);
+  background-size: cover;
+}
+
+.hub-legenda {
+  background-image: url(/img/dir_tec/hubsoft.png);
+  background-size: cover;
+}
+
+.otrs-legenda {
+  background-image: url(/img/dir_tec/otrs.png);
+  background-size: cover;
+}
+
+.playg-legenda {
+  background-image: url(/img/dir_tec/playgroud.jpg);
+  background-size: cover;
+}
+
+.geomap-legenda {
+  background-image: url(/img/DSO/geomap.png);
+  background-size: cover;
+}
+
+/* estrelas */
+.star {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* setores */
+.content {
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: aliceblue;
+  padding: 20px;
+  z-index: 4;
+}
+
+.setor {
+  width: 300px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  box-shadow: 11px 19px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.setor-header {
+  background-color: #fe6600;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 1.5rem;
+  color: #fff;
+}
+
+.tools {
+  /* background-color: #00a003; */
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 70px 70px 70px;
+  gap: 5px;
+}
+.tools-icon {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  width: 90px;
+  height: 70px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tools-icon img {
+  width: 100%;
+  height: 70px;
+}
+
+/* animação sistema solar */
+@keyframes orbitar {
+  to {
+    transform: rotate(360deg);
+  }
+}
