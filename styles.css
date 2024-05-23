@@ -33,11 +33,12 @@
   left: 12em;
   width: 15em;
   height: 15em;
-  background-image: url(/img/middleware.png);
+  background-image: url(/img/middle.png);
   background-size: cover;
   border-radius: 50%;
   z-index: 2;
 }
+
 .geomap,
 .hub,
 .playg,
@@ -224,19 +225,6 @@
   cursor: pointer;
 }
 
-.description {
-  width: 900px;
-  height: 700px;
-  border-radius: 60px 5px;
-  background-color: #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 7;
-  position: absolute;
-  margin-bottom: 400px;
-}
-
 .senior-legenda {
   background-image: url(/img/dir_tec/senior-sistemas.png);
   background-size: cover;
@@ -260,6 +248,33 @@
 .geomap-legenda {
   background-image: url(/img/DSO/geomap.png);
   background-size: cover;
+}
+
+/* Relacionamentos */
+
+.dialog-content {
+  color: #222020;
+  border-radius: 5px;
+  background-color: #cdcdcd;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-content h1 {
+  border-bottom: 2px solid #cdcdcd;
+  margin-bottom: 50px;
+}
+
+.relac {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10pxpx;
 }
 
 /* estrelas */

@@ -23,28 +23,19 @@ function createStars(containerId, numberOfStars) {
 createStars("container", 500);
 
 // Lista de ids
-const idMensagens = {
-  senior: "Você clicou no Sênior.",
-  hub: "Você clicou no Hubsoft.",
-  playg: "Você clicou no Playgroud.",
-  otrs: "Você clicou no otrs.",
-  geomap: "Você clicou no geomap.",
-  canva: "Você clicou no canva",
-};
+const idArr = ["senior", "hub", "plaug", "otrs", "geomap"];
 
 // função que cria uma div na tela com Descricão da ferramenta
+const mhub = document.getElementById("mhub");
+const hubClose = document.getElementById("hub-close");
+
 function descricao(event) {
   const idClicado = event.target.id;
-  const descricao = document.getElementById("container-subtitle");
 
-  if (idMensagens[idClicado]) {
-    const msgDesc = document.createElement("div");
-    msgDesc.classList.add("description");
-    msgDesc.textContent = idMensagens[idClicado];
-    descricao.appendChild(msgDesc);
-
-    msgDesc.addEventListener("click", function () {
-      this.parentNode.removeChild(this);
+  if (idClicado == "hub") {
+    mhub.showModal();
+    hubClose.addEventListener("click", () => {
+      mhub.close();
     });
   }
 }
