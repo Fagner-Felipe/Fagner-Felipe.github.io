@@ -63,6 +63,8 @@
   border-radius: 50%;
   z-index: 2;
 }
+
+.blip,
 .bd,
 .geomap,
 .hub,
@@ -127,6 +129,14 @@
   animation: orbitar 22.5s linear infinite;
 }
 
+.blip {
+  top: -55em;
+  left: -55em;
+  width: 150em;
+  height: 150em;
+  animation: orbitar 21s linear infinite;
+}
+
 .senior-tools {
   top: 0;
   right: 0;
@@ -157,6 +167,7 @@
 .otrs::before,
 .geomap::before,
 .bd::before,
+.blip::before,
 .senior-tools::before,
 .senior-tools2::before,
 .senior-tools3::before {
@@ -217,6 +228,16 @@
   height: 7em;
   background-image: url(/img/database.png);
   background-size: cover;
+}
+
+.blip::before {
+  top: 19em;
+  right: 19em;
+  width: 7em;
+  height: 7em;
+  background-image: url(/img/dir_comercial/blip.jpeg);
+  background-size: cover;
+  background-position: center;
 }
 
 .senior-tools::before {
@@ -356,7 +377,7 @@ button:focus {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   padding: 20px;
   z-index: 4;
 }
@@ -364,7 +385,7 @@ button:focus {
 .setor {
   width: 300px;
   height: auto;
-  border: 1px solid #ccc;
+  background-color: aliceblue;
   border-radius: 5px;
   margin-bottom: 40px;
   box-shadow: 11px 19px 15px -3px rgba(0, 0, 0, 0.1);
