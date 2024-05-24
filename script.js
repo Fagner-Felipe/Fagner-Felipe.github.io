@@ -23,11 +23,19 @@ function createStars(containerId, numberOfStars) {
 createStars("container", 500);
 
 // Lista de ids
-const idArr = ["senior", "hub", "plaug", "otrs", "geomap"];
+const idArr = ["senior", "hub", "playg", "otrs", "geomap"];
 
 // função que cria uma div na tela com Descricão da ferramenta
 const mhub = document.getElementById("mhub");
+const mSenior = document.getElementById("mSenior");
+const mPlayg = document.getElementById("mPlayg");
+const mOtrs = document.getElementById("mOtrs");
+const mGeomap = document.getElementById("mGeomap");
+const seniorClose = document.getElementById("senior-close");
 const hubClose = document.getElementById("hub-close");
+const playgClose = document.getElementById("playg-close");
+const otrsClose = document.getElementById("otrs-close");
+const geomapClose = document.getElementById("geomap-close");
 
 function descricao(event) {
   const idClicado = event.target.id;
@@ -36,6 +44,26 @@ function descricao(event) {
     mhub.showModal();
     hubClose.addEventListener("click", () => {
       mhub.close();
+    });
+  } else if (idClicado == "senior") {
+    mSenior.showModal();
+    seniorClose.addEventListener("click", () => {
+      mSenior.close();
+    });
+  } else if (idClicado == "playg") {
+    mPlayg.showModal();
+    playgClose.addEventListener("click", () => {
+      mPlayg.close();
+    });
+  } else if (idClicado == "otrs") {
+    mOtrs.showModal();
+    otrsClose.addEventListener("click", () => {
+      mOtrs.close();
+    });
+  } else if (idClicado == "geomap") {
+    mGeomap.showModal();
+    geomapClose.addEventListener("click", () => {
+      mGeomap.close();
     });
   }
 }
