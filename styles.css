@@ -268,7 +268,7 @@
 
 /* conteiner legenda */
 .container-subtitle {
-  width: 800px;
+  width: 950px;
   height: 200px;
   margin-bottom: 100px;
   display: flex;
@@ -284,8 +284,9 @@
 .playg-legenda,
 .otrs-legenda,
 .geomap-legenda,
-.bd-legenda {
-  width: 100px;
+.bd-legenda,
+.blip-legenda {
+  width: 350px;
   height: 100px;
   border-radius: 50%;
   cursor: pointer;
@@ -321,6 +322,12 @@
   background-size: cover;
 }
 
+.blip-legenda {
+  background-image: url(/img/dir_comercial/blip.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
 /* Relacionamentos */
 
 dialog {
@@ -337,6 +344,7 @@ dialog {
   justify-content: center;
   align-items: center;
   text-align: start;
+  max-width: 500px;
 }
 
 .dialog-content h1 {
