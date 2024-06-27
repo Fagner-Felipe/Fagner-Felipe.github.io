@@ -23,7 +23,7 @@ function createStars(containerId, numberOfStars) {
 createStars("container", 500);
 
 // Lista de ids
-const idArr = ["senior", "hub", "playg", "otrs", "geomap"];
+const idArr = ["senior", "hub", "playg", "otrs", "geomap", "blip"];
 
 // função que cria uma div na tela com Descricão da ferramenta
 const mhub = document.getElementById("mhub");
@@ -31,11 +31,13 @@ const mSenior = document.getElementById("mSenior");
 const mPlayg = document.getElementById("mPlayg");
 const mOtrs = document.getElementById("mOtrs");
 const mGeomap = document.getElementById("mGeomap");
+const mBlip = document.getElementById("mBlip");
 const seniorClose = document.getElementById("senior-close");
 const hubClose = document.getElementById("hub-close");
 const playgClose = document.getElementById("playg-close");
 const otrsClose = document.getElementById("otrs-close");
 const geomapClose = document.getElementById("geomap-close");
+const blipClose = document.getElementById("blip-close");
 
 function descricao(event) {
   const idClicado = event.target.id;
@@ -64,6 +66,11 @@ function descricao(event) {
     mGeomap.showModal();
     geomapClose.addEventListener("click", () => {
       mGeomap.close();
+    });
+  } else if (idClicado == "blip") {
+    mBlip.showModal();
+    blipClose.addEventListener("click", () => {
+      mBlip.close();
     });
   }
 }
